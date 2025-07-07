@@ -6,6 +6,10 @@ module.exports = defineConfig({
     "screenshotsFolder": "cypress/screenshots",
   e2e: {
     baseUrl: "https://example.cypress.io",
+    specPattern: [ 
+      '**/*.test.js',
+      '**/*.cy.js'
+    ],
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
