@@ -1,6 +1,13 @@
 {
   "devDependencies": {
-    "cypress": "^14.5.0"
+    "cypress": "^14.5.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "scripts": {
+    "test:qaauto": "npx cypress run --config-file cypress.config.qaauto.js --env configFile=qaauto --spec cypress/e2e/lesson-20/lesson-20.test.js",
+    "test:qaauto2": "npx cypress run --config-file cypress.config.qaauto2.js --env configFile=qaauto2 --spec cypress/e2e/lesson-20/lesson-20.test.js"
   },
   "dependencies": {
     "@faker-js/faker": "^9.9.0"
