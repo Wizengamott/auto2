@@ -25,7 +25,7 @@ describe('Garage and Expenses', () => {
         cy.contains('Porsche').should('exist');
     })
 
-    it.only ('Add an expense', () => {
+    it ('Add an expense', () => {
         expenses.addNewExpense('Porsche Panamera', '11.07.2025', '150', '20', '500')
         cy.contains('11.07.2025').should('be.visible');
     })
