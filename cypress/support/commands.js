@@ -13,3 +13,18 @@ Cypress.Commands.overwrite('type', (originalFn, element, text, options) => {
     return originalFn(element, text, options)
   })
   
+Cypress.Commands.add('createExpenseViaApi', (carId, expenseDetails) => {
+      cy.request({
+          method: 'POST',
+          url: `https://qauto.forstudy.space/api/expenses`,
+          body: {
+              carId: carId,
+              mileage: expenseDetails.mileage,
+              liters: expenseDetails.liters,
+              totalCost: expenseDetails.totalCost,
+              reportedAt: expenseDetails.reportedAt
+          },
+      }).then((response) => {
+          return response;
+      });
+  })
