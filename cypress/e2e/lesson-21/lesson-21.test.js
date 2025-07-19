@@ -114,4 +114,3 @@ describe ('work with API', () => {
                 cy.get('.col-lg-9').should('contain', totalCost, reportedAt)
               })
         })
-})
